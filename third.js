@@ -32,7 +32,7 @@ plane.rotation.x = 180.9;
 plane.position.y = -2;
 
 
-const light = new THREE.AmbientLight(0xc50094, 1    );
+const light = new THREE.AmbientLight(0xc50094, 1);
 light.position.set(1, 1, 1);
 scene.add(light);
 

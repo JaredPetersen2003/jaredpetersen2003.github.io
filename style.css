@@ -2,7 +2,7 @@ body {
   margin: 0;
   font: helvetica;
   background-color: black;
-  overflow: hidden;
+  overflow-x: hidden;
   cursor: url('img/circle-outline\(1\).svg'), auto;
 
 }
@@ -564,10 +564,6 @@ span {
   
 }
 
-.canvas{
-  width: 100%;
-  height: 100%;
-}
 
 
 
