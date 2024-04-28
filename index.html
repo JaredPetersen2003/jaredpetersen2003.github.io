@@ -191,7 +191,7 @@
             <input type="email" id="email" name="email" required>
             <label for="message">Message:</label>
             <textarea id="message" name="message" required></textarea>
-            <button type="submit">Submit</button>
+            <button type="button" id="email-submit">Submit</button>
           </form>
         </div>
       </div>
@@ -213,18 +213,31 @@
       });
     })();
 
-    var templateParams = {
-      to_name: 'xyz',
-      from_name: 'abc',
-      message_html: 'Please Find out the attached file'
-    };
+    const email = document.getElementById("email").value;
+    const name = document.getElementById("name").value;
+    const message = document.getElementById("message").value;
 
-    //emailjs.sendForm("service_ndg17pj","template_ya6j0hd", '#contact-form')
-    //.then(function(response) {
-    //console.log('SUCCESS!', response.status, response.text);
-    //}, function(error) {
-    //console.log('FAILED...', error);
-    //});
+    console.log(email);
+
+    var templateParams = {
+      email: email,
+      from_name: name,
+      message: message
+    };
+    const button = document.getElementById("email-submit");
+
+    // button1 click event listener to apply function
+    button.addEventListener("click", function() {
+      emailjs.send("service_ndg17pj", "template_ya6j0hd", templateParams)
+        .then(function (response) {
+          console.log('SUCCESS!', response.status, response.text);
+        }, function (error) {
+          console.log('FAILED...', error);
+        });
+    }
+  );
+
+   
   </script>
 
 </body>
