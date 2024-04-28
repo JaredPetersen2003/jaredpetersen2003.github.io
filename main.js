@@ -1,7 +1,6 @@
 import * as THREE from 'three';
 import gsap from 'gsap';
 import Lenis from 'lenis';
-import SplitType from 'split-type';
 
 const lenis = new Lenis()
 
