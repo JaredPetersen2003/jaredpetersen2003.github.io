@@ -1,6 +1,5 @@
 import * as THREE from 'three';
 import gsap from 'gsap';
-import Lenis from 'lenis';
 
 const lenis = new Lenis()
 
