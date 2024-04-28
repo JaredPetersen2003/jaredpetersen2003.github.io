@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import ScrollTrigger from 'ScrollTrigger';
 import Lenis from 'lenis';
 import SplitType from 'split-type';
 
