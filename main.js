@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Lenis from 'lenis';
+import SplitType from 'split-type';
 
 const lenis = new Lenis()
 
@@ -23,13 +24,15 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-const sphere = new THREE.Mesh(new THREE.SphereGeometry(1, 15, 15), new THREE.MeshStandardMaterial({ color: 0xffffff, wireframe: true }));
+const sphere = new THREE.Mesh(new THREE.SphereGeometry(4, 15, 15), new THREE.MeshStandardMaterial({ color: 0xffffff, wireframe: true }));
 scene.add(sphere);
+const sphereID = sphere.uuid;
+
 
 const smallSphere = new THREE.Mesh(new THREE.SphereGeometry(0.5, 10, 10), new THREE.MeshStandardMaterial({ color: 0x800080, wireframe: true }));
-scene.add(smallSphere);
+sphere.add(smallSphere);
 
-smallSphere.position.set(3, 0, 0);
+smallSphere.position.set(6, 0, 5);
 
 
 
@@ -48,7 +51,7 @@ for (let i = 0; i < 100; i++) {
 }
 
 
-sphere.position.set(0.8, 1, 2)
+sphere.position.set(0.8, 1, -5)
 
 const mousePosition = new THREE.Vector2;
 let rotationAngle = 0;
@@ -69,6 +72,13 @@ const secondPointLight = new THREE.PointLight(0xFFA500, 5);
 secondPointLight.position.set(5, 5, 5);
 scene.add(secondPointLight);
 
+document.addEventListener('mousemove', (event) => {
+  const x = event.clientX / window.innerWidth;
+  const y = event.clientY / window.innerHeight;
+  camera.position.x = x * 0.2;
+  camera.position.y = y * 0.2;
+  camera.lookAt(scene.position);
+});
 
 const animate = () => {
   requestAnimationFrame(animate);
@@ -76,6 +86,8 @@ const animate = () => {
   // Update the rotation of the sphere
   sphere.rotation.y += 0.005;
   smallSphere.rotation.y += 0.003;
+
+
 
   renderer.render(scene, camera);
 }
@@ -86,6 +98,8 @@ const onWindowResize = () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
 
 };
+
+
 
 window.addEventListener('resize', onWindowResize);
 
@@ -106,7 +120,7 @@ let t3 = gsap.timeline({
     trigger: ".uct ",
     start: "top bottom",
     end: "30% center -=1000px",
-    scrub: true,
+    scrub: false,
     markers: false
   }
 });
@@ -116,7 +130,7 @@ let t4 = gsap.timeline({
     trigger: ".private",
     start: "top bottom",
     end: "30% center -=1000px",
-    scrub: true,
+    scrub: false,
     markers: false
   }
 });
@@ -126,12 +140,55 @@ let t5 = gsap.timeline({
     trigger: ".top-trend",
     start: "top bottom",
     end: "40% 70%",
-    scrub: true,
+    scrub: false,
     markers: false
   }
 });
 
+const t6 = gsap.timeline({defaults:{duration: 1}});
+
 t3.fromTo(".uct", {x: 900, opacity: 0, duration: 1}, {x: 0, opacity: 1, duration: 1});
 t4.fromTo(".private", {x: -900, opacity: 0, duration: 1}, {x: 0, opacity: 1, duration: 1});
 t5.fromTo(".top-trend", {x: 900, opacity: 0, duration: 1}, {x: 0, opacity: 1, duration: 1});
+t6.fromTo(".test", {x: -900, opacity: 0, duration: 1}, {x: 0, opacity: 1, duration: 1});
+
+gsap.registerPlugin(ScrollTrigger);
+
+const splitTypes = document.querySelectorAll('.animate');
+
+splitTypes.forEach((char,i) => {
+  const split = new SplitType(char, {types: 'words,chars'});
+  
+  
+  gsap.from(split.chars, {
+
+    scrollTrigger:{
+      trigger: char,
+      start: "top bottom",
+      end: "bottom center",
+      scrub: false,
+      markers: false
+    },
+    y: 100,
+    opacity:0,
+    stagger:0.1
+    });
+  });
+
+  const splitTypes1 = document.querySelectorAll('.test');
+
+
+splitTypes1.forEach((char,i) => {
+  const split = new SplitType(char, {types: 'words,chars'});
+  
+  
+  gsap.from(split.chars, {
+
+    y: 100,
+    opacity:0,
+    stagger:0.1
+    });
+  });
+
+  
 

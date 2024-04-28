@@ -12,8 +12,14 @@
     "vite": "^5.2.0"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
+    "@repcomm/three.terrain": "github:repcomm/three.terrain",
     "gsap": "^3.12.5",
     "lenis": "^1.0.44",
-    "three": "^0.163.0"
+    "simplex-noise": "^4.0.1",
+    "split-type": "^0.3.4",
+    "three": "^0.163.0",
+    "three-gltf-loader": "^1.111.0",
+    "threex": "^1.0.0"
   }
 }

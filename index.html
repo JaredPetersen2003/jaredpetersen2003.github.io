@@ -1,100 +1,220 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
-<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-<script src="https://con.jsdelivr.net/gh/studio-frieght/lenis@1/bundled/lensis.min.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
 
-  </head>
-  <body>
-    <canvas class="webgl"></canvas>
-    <div class="content">
+  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+  <script src="https://con.jsdelivr.net/gh/studio-frieght/lenis@1/bundled/lensis.min.js"></script>
+
+</head>
+
+<body>
+  <canvas class="webgl"></canvas>
+  <div class="content">
     <nav>
       <ul>
         <li><a href="/">EXPERIENCE</a></li>
-        <li><a href="/about">WORK</a></li>
-        <li><a href="/contact">CONTACT</a></li>
+        <li><a href="#experience">WORK</a></li>
+        <li><a href="#contact">CONTACT</a></li>
       </ul>
-      
+
     </nav>
     <!-- <img class="code1" src="img/image.png"/> -->
     <!-- <img class="code2" src="img/image.png"/> -->
- 
+
     <span>
       <div class="hero">
-      <h1>JARED PETERSEN</h1>
-      <h2>SOFTWARE DEVELOPER</h2>
-    </div>
+        <h1 class="test">JARED PETERSEN</h1>
+        <h2 class="test">SOFTWARE DEVELOPER</h2>
+      </div>
       <div class="definition">
         <div class="name">
           <h3>
             JARED
-          </h3> 
-            <p>[/je-red/] <i class='fas fa-volume-up' style='font-size:24px; color:white'></i></p>
+          </h3>
+          <p>[/je-red/] <i class='fas fa-volume-up' style='font-size:24px; color:white'></i></p>
         </div>
-      
-      <p>
-        <br>
-        noun <br>
-        &emsp; 1. An individual that pushes boundaries
-      </p>
-    </div>
-    <div class="scroll">
-      <button href="#experience">
-        <p>SCROLL DOWN&emsp; ▼</p>
-      </button> 
-    </div>
+
+        <p>
+          <br>
+          noun <br>
+          &emsp; 1. An individual that pushes boundaries
+        </p>
+      </div>
+      <div class="scroll">
+        <button>
+          <a href="#experience">
+            <p>SCROLL DOWN&emsp; ▼</p></a>
+        </button>
+      </div>
     </span>
 
     <section id="experience">
       <div class="experience-heading">
-      <h1>WORK</h1>
-      <h3>EXPERIENCE</h3>
-    </div>
-    <div class="experience-images">
-      
+        <h1 class="animate">WORK</h1>
+        <h3 class="animate">EXPERIENCE</h3>
+      </div>
+      <div class="experience-images">
+        <canvas id="canvas" class="canvas"></canvas>
 
     </section>
-    <div class="timeline">
-      <div class="timeline__component">
-        <div class="timeline__date timeline__date--right">March 2023 - Present</div>
+
+    <!-- Vertical Timeline -->
+    <section id="conference-timeline">
+
+      <div class="conference-center-line"></div>
+      <div class="conference-timeline-content">
+
+        <!-- Article -->
+        <div class="timeline-article">
+          <div class="content-left-container">
+            <div class="timeline__date timeline__date-right">March 2023 - Present</div>
+          </div>
+          <div class="content-right-container uct">
+            <div class="box2">
+              <div class="title">
+                <img src="http://i63.tinypic.com/117hi0p.png" width="18" height="18" class="title" />
+                <p class="title">EXPERIENCE/UCT.EXE</p>
+                <button>X</button>
+                <button>?</button>
+              </div>
+              <div class="body">
+                <div class="container">
+                  <h3>COMPUTER SCIENCE TUTOR</h3>
+                  <p>Conducted weekly tutorial sessions for first and second year CS students. Provided guidance and
+                    feedback on assignments, helping students improve their coding skills and logical thinking
+                    abilities.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- // Article -->
+
+        <!-- Article -->
+        <div class="timeline-article">
+          <div class="content-left-container private">
+
+            <div class="box2">
+              <div class="title">
+                <img src="http://i63.tinypic.com/117hi0p.png" width="18" height="18" class="title" />
+                <p class="title">EXPERIENCE/PRIVATE.EXE</p>
+                <button>X</button>
+                <button>?</button>
+              </div>
+              <div class="body">
+                <div class="container">
+                  <h3>HIGH SCHOOL IT TUTOR</h3>
+                  <p>Provided one-on-one tutoring sessions to high school students, delivering comprehensive instruction
+                    in various aspects of Information Technology.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-right-container">
+            <div class="timeline__date ">March 2023 - Present</div>
+          </div>
+
+        </div>
+        <!-- // Article -->
+
+        <!-- Article -->
+        <div class="timeline-article">
+          <div class="content-left-container">
+            <div class="timeline__date timeline__date-right">June 2020 - Feb 2021</div>
+          </div>
+          <div class="content-right-container  top-trend">
+            <div class="box2">
+              <div class="title">
+                <img src="http://i63.tinypic.com/117hi0p.png" width="18" height="18" class="title" />
+                <p class="title">EXPERIENCE/TOP TREND.EXE</p>
+                <button>X</button>
+                <button>?</button>
+              </div>
+              <div class="body">
+                <div class="container">
+                  <h3>FREELANCE TECHNICAL ASSISTANT</h3>
+                  <p>Assisted in the development of a website for a local business</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- // Article -->
+
+
       </div>
-      <div class="timeline__middle">
-        <div class="timeline__point"></div>
+
+    </section>
+    <!-- // Vertical Timeline -->
+
+    <section id="contact" class="contact">
+      <div class="contact-heading">
+        <h1 class="animate">CONTACT</h1>
+        <h3 class="animate">ME</h3>
       </div>
-      <div class="timeline__component ">
-        <img class="i uct" src="img/image(1).png"/>
+      <div class="box">
+        <div class="title">
+          <img src="http://i63.tinypic.com/117hi0p.png" width="18" height="18" class="title" />
+          <p class="title">CONTACT.EXE</p>
+          <button>X</button>
+          <button>?</button>
+        </div>
+        <div class="body">
+          <form class="contact-form" id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
       </div>
-      <div class="timeline__component ">
-        <img class="i left private" src="img/image(1).png"/>
-      </div>
-      <div class="timeline__middle">
-        <div class="timeline__point"></div>
-      </div>
-      <div class="timeline__component">
-        <div class="timeline__date">March 2023 - Present</div>
-      </div>
-      <div class="timeline__component">
-        <div class="timeline__date timeline__date--right">June 2020 - September 2020</div>
-      </div>
-      <div class="timeline__middle">
-        <div class="timeline__point"></div>
-      </div>
-      <div class="timeline__component ">
-        <img class="i top-trend" src="img/image(1).png"/>
-      </div>
-      
-    
-    </div>
-    </div>
-    <script type="module" src="/main.js"></script>
-  </body>
+  </div>
+
+
+
+  </section>
+
+  <script type="module" src="/main.js"></script>
+  <script type="module" src="/third.js"></script>
+  <!---<script type="module" src="/app.js"></script> --->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "5spbPzV6Gsgrh4wY-",
+      });
+    })();
+
+    var templateParams = {
+      to_name: 'xyz',
+      from_name: 'abc',
+      message_html: 'Please Find out the attached file'
+    };
+
+    //emailjs.sendForm("service_ndg17pj","template_ya6j0hd", '#contact-form')
+    //.then(function(response) {
+    //console.log('SUCCESS!', response.status, response.text);
+    //}, function(error) {
+    //console.log('FAILED...', error);
+    //});
+  </script>
+
+</body>
+
 </html>
