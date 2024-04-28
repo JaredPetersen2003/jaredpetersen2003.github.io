@@ -16,6 +16,10 @@ a{
   text-decoration: none;
 }
 
+button:hover, a:hover {
+  cursor: url('img/image-from-rawpixel-id-7158649-png.png'), auto;
+}
+
 h3 {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
